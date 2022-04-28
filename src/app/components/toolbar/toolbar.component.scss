@@ -1,0 +1,36 @@
+.toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    &--header {
+        display: flex;
+        align-items: center;
+        width: 50px;
+        cursor: pointer;
+        
+        
+        .header--logo {
+            width: 100%;
+        }
+        .header {
+
+            margin-bottom: 0;
+            padding: 7px;
+            border-bottom: 1px solid #fff ;
+        }
+    }
+    &--login {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 500px;
+
+        
+
+        .searchInput{
+            width: 400px;
+        }
+    }
+}

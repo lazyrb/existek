@@ -1,0 +1,15 @@
+<div>
+  <mat-toolbar color="primary" class="toolbar">
+    <div routerLink="/" class="toolbar--header">
+      <img class="header--logo" src="./assets/eCommerce.png" alt="">
+      <span class="header mat-h1">Your E-Commerce</span>
+    </div>
+    <div class="toolbar--login">
+      <mat-form-field class="searchInput" appearance="standard">
+        <input  placeholder="Search for product" [(ngModel)]="searchService.searchText"   type="text" matInput autocomplete="off">
+      </mat-form-field>
+      <button mat-icon-button class="login-btn" (click)="formService.isFormHidden = !formService.isFormHidden"><mat-icon>login</mat-icon></button>
+      <app-login></app-login>
+    </div>
+  </mat-toolbar>
+</div>

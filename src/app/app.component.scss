@@ -1,0 +1,10 @@
+.container {
+    display: flex;
+    background-color: aliceblue;
+}
+.sidebar {
+    flex: 15%;
+}
+.main {
+    flex: 85%;
+}

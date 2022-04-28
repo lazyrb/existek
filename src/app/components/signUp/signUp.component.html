@@ -1,0 +1,28 @@
+<div class="form-container">
+  <div class="form">
+    <div class="form--header">
+      <h1>Sign-Up</h1>
+    </div>
+    <div class="form--inputs" [formGroup]="signUpForm" >
+  
+      <div class="form--input_container">
+        <label>Name: </label>
+        <input class="input" type="text" formControlName="name">
+      </div>
+      <div class="form--input_container" >
+        <label>Email: </label>
+        <input class="input" type="text" formControlName="email">
+      </div>
+      <div class="form--input_container" >
+        <label>Password:</label>
+        <input class="input" type="text" formControlName="password">
+      </div>
+      <div class="form--input_container">
+        <label>re-type password:</label>
+        <input class="input" type="text" formControlName="rePassword">
+      </div>
+      
+    </div>
+    <button class="form--login-button" mat-flat-button type="submit" (click)="onSubmit()"  color="primary">Sign-Up</button>
+  </div>
+</div>

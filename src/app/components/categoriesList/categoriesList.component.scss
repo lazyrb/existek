@@ -1,0 +1,23 @@
+.categories {
+    width: 250px;
+    &--list {
+        padding: 0;
+        width: 90%;
+        margin: auto;
+        margin-top: 10px;
+    }
+    
+    .category {
+        list-style: none;
+        padding: 5px;
+
+        a {
+            width: 100%;
+        }
+    }
+    .active {
+        background-color: aliceblue;
+        border: 1px solid #CECECE;
+        color: #2196f3;
+    }
+}

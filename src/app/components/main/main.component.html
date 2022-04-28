@@ -1,0 +1,35 @@
+
+
+  <mat-grid-list class="grid" cols="3" rowHeight="450">
+    <mat-grid-tile
+      *ngFor="let product of products | async  | searchByTitle: searchService.searchText | paginate: {itemsPerPage: count, currentPage: p} "
+    >
+      <mat-card class="product">
+        <div class="product--image_container">
+          <img class="product--image" src="{{ product.image }}" alt="" />
+        </div>
+        <mat-card-title class="product--title">{{
+          product.title | maxWords: 6
+        }}</mat-card-title>
+        <div>
+          <span color="primary" class="product--price"
+            >${{ product.price }}</span
+          >
+          <span style="color: #cecece">/piece</span>
+        </div>
+        <div class="rating">
+          <span><mat-icon class="star">star</mat-icon></span>
+          <span>{{ product.rating.rate }}</span>
+          <span class="count">({{ product.rating.count }})</span>
+        </div>
+        <mat-card-actions>
+          <button class="btn" mat-flat-button color="primary">
+            Add to Cart
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+<div class="pagination">
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
